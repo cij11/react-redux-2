@@ -41,9 +41,9 @@ function mapStateToProps(state){
 
 //Anything returned from this function will end up as props on the BookList container (eventually).
 function mapDispatchToProps(dispatch){
-  //Whenever selectBook is called, the result should be passed to all our reducers.
+  //Whenever selectBook is called, the result should be passed to ALL our reducers. That is what bindActionCreators/dispatch
     return bindActionCreators({ selectBook: selectBook}, dispatch)  //Bind key select book to action selectBook
-    //Now we can call this.props.selectBook when we want to fire a selectBook action. (props.selectBook = selectBook)
+
 }
 
 //Export the container: Eg, the connect of maptStateToPRops and Booklist
